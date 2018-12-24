@@ -1,0 +1,124 @@
+.admin-fib-question-editor,
+.admin-quiz-fib-question-editor{
+    .lp-box-data-content {
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .invalid {
+            color: #FF0000;
+        }
+        .fib-blanks {
+            width: 100%;
+            tr {
+                &.invalid {
+                    color: #FF0000;
+                    .blank-actions {
+                        .blank-status {
+                            color: #000;
+                            &:before {
+                                content: "\f335";
+                                color: #FF0000;
+                            }
+                        }
+                    }
+                }
+            }
+            td {
+                &.blank-position {
+                    text-align: right;
+                    font-weight: bold;
+                }
+                &.blank-fill {
+                    input {
+                        width: 100%;
+                        height: 28px;
+                    }
+                }
+                &.blank-actions {
+                    text-align: right;
+                    .delete {
+                        color: #FF0000;
+                    }
+                    .blank-status {
+                        float: left;
+                        font-family: Dashicons;
+                        display: inline-block;
+                        font-size: 20px;
+                        margin-top: 5px;
+                        &:before {
+                            content: "\f147";
+                            color: #00a0d2;
+                        }
+                        &.invalid {
+
+                        }
+                    }
+                }
+            }
+        }
+        .mce-i-clear-blanks,
+        .mce-i-insert-blank {
+            font-family: Dashicons;
+            &:before {
+                display: inline-block;
+            }
+        }
+        .mce-i-insert-blank:before {
+            content: "\f132";
+            margin-top: 2px;
+        }
+        .mce-i-clear-blanks:before {
+            content: "\f335";
+            margin-top: 1px;
+        }
+        .mce-toolbar-grp {
+            display: none;
+        }
+    }
+    .blank-options {
+        ul {
+            display: none;
+            padding: 20px;
+            border: 1px solid #DDD;
+            list-style: none;
+            li {
+                .description {
+                    margin-top: 0;
+                }
+                h3 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.mce-branding-powered-by {
+    display: none;
+}
+
+.mce-tinymce {
+    border: 1px solid #DDD !important;
+}
+
+#admin-editor-lp_quiz {
+    .admin-quiz-fib-question-editor {
+        .lp-box-data-content {
+            border: none;
+            text-align: left;
+            textarea {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .description {
+                text-align: left;
+            }
+        }
+    }
+}
